@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#AC1C35" />
+  <title>Birthday Vault</title>
+  <link rel="icon" type="image/svg+xml" href="/Hers-only/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/Hers-only/assets/index-DNHqrVIt.js"></script>
+  <link rel="stylesheet" crossorigin href="/Hers-only/assets/index-C8vkA-nH.css">
+</head>
+<body>
+  <div id="stage">
+
+    <section class="scene countdown-scene" aria-label="Countdown">
+      <!-- Countdown content injected by scenes/countdown.js -->
+    </section>
+
+    <section class="scene vault-scene" aria-label="Enter passcode" tabindex="-1">
+      <!-- Keypad injected by components/keypad.js via scenes/vault.js -->
+    </section>
+
+    <section class="scene envelope-scene" aria-label="Open the envelope">
+      <!-- Envelope injected by scenes/envelope.js -->
+    </section>
+
+    <section class="scene letter-scene" aria-label="Read the letter">
+      <!-- Letter injected by scenes/letter.js -->
+    </section>
+
+    <section class="scene promises-scene" aria-label="Choose a promise">
+      <!-- Cards injected by scenes/promises.js -->
+    </section>
+
+    <section class="scene memory-scene" aria-label="Memory vault">
+      <!-- Memory cards injected by scenes/memory.js -->
+    </section>
+
+    <section class="scene fate-scene" aria-label="Fate engine">
+      <!-- Wheel injected by components/wheel.js via scenes/fate.js -->
+    </section>
+
+    <section class="scene constellation-scene" aria-label="Constellation">
+      <canvas class="star-canvas"></canvas>
+      <!-- Text and button injected by scenes/constellation.js -->
+    </section>
+
+    <section class="scene afterglow-scene" aria-label="Afterglow">
+      <!-- Closing content injected by scenes/afterglow.js -->
+    </section>
+
+  </div>
+</body>
+</html>
