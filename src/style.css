@@ -1,0 +1,77 @@
+/* Required base rules — do not remove or override */
+
+:root {
+  --crimson:       #AC1C35;
+  --crimson-deep:  #7A0E22;
+  --crimson-glow:  rgba(172, 28, 53, 0.25);
+  --bg:            #080106;
+  --surface:       rgba(172, 28, 53, 0.10);
+  --surface-rim:   rgba(172, 28, 53, 0.22);
+  --text:          #FFF0F3;
+  --muted:         #D4A0AA;
+  --gold:          #C9A84C;
+  --gold-soft:     rgba(201, 168, 76, 0.15);
+  --vh: 1vh;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#stage {
+  position: relative;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  /* NO transition: opacity here — GSAP controls all opacity */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.countdown-scene {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+button {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: inherit;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Instant transitions for motion-sensitive users */
+  .scene { transition: none !important; }
+}
